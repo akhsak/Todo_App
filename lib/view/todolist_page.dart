@@ -41,13 +41,13 @@ class _TodoScreenpageState extends State<TodoScreenpage> {
                         )
                       : value.todoList.isEmpty
                           ? Center(
-                              child:
-                               Lottie.asset(
-                                  'todo/assets/Animation - 1709198344685.json',
-                                  // width:
-                                  //     MediaQuery.of(context).size.width * 0.8,
-                                  // height:
-                                  //     MediaQuery.of(context).size.height * 0.7
+                             child:
+                              Image.asset(
+                                 'assets/search_image.png',
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.7
                                   ),
                             )
                           : ListView.builder(
