@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:todo/view/home_page.dart';
+import 'package:provider/provider.dart';
+import 'package:todo/Controller/provide.dart';
+import 'package:todo/view/todolist_page.dart';
 
 void main(){
   runApp(const MyApp());
@@ -10,9 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:TodoScreenpage() ,
+    return ChangeNotifierProvider(create: (context) => Todooprovider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home:TodoScreenpage() ,
+      ),
     );
   }
 }
