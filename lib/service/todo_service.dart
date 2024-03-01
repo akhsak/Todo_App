@@ -1,6 +1,6 @@
 
 import 'package:dio/dio.dart';
-import 'package:todo/model/TodoModel.dart';
+import 'package:todo/model/todomodel.dart';
 
 class TodoService {
   final Dio _dio = Dio();

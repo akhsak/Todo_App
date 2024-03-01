@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:todo/model/TodoModel.dart';
+import 'package:todo/model/todomodel.dart';
 import 'package:todo/service/todo_service.dart';
 
 class Todooprovider extends ChangeNotifier {

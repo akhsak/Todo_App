@@ -1,10 +1,8 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/Controller/provide.dart';
-import 'package:todo/view/addlist_page.dart';
+import 'package:todo/view/add_list_page.dart';
 
 class TodoScreenpage extends StatefulWidget {
   const TodoScreenpage({super.key});
@@ -16,7 +14,8 @@ class TodoScreenpage extends StatefulWidget {
 class _TodoScreenpageState extends State<TodoScreenpage> {
 
 
-    void initState() {
+    @override
+  void initState() {
     super.initState();
     Provider.of<Todooprovider>(context, listen: false).fetchTodo();
   }
@@ -25,7 +24,8 @@ class _TodoScreenpageState extends State<TodoScreenpage> {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todo APP'),
+        title:const Text('Todo App',style: TextStyle(color: Colors.white),),
+        centerTitle: true,
         backgroundColor: Colors.blue,
       ),
       body: Padding(
@@ -77,10 +77,11 @@ class _TodoScreenpageState extends State<TodoScreenpage> {
                                     }, itemBuilder: (context) {
                                       return [
                                         const PopupMenuItem(
-                                            child: Text('EDIT'), value: 'edit'),
+                                            value: 'edit',
+                                            child: Text('EDIT')),
                                         const PopupMenuItem(
-                                            child: Text('DELETE'),
-                                            value: 'delete')
+                                            value: 'delete',
+                                            child: Text('DELETE'))
                                       ];
                                     }),
                                   ),
@@ -151,20 +152,7 @@ class _TodoScreenpageState extends State<TodoScreenpage> {
           ),
         );
       },
-      //  ListView.builder(
-      // itemCount: items.length,
-      //   itemBuilder: (context,index){
-      //     final item=items[index]as Map;
-      //      return ListTile(
-      //       leading:CircleAvatar(child: Text('${index+1}'),) ,
-      //       title: Text(item['textt']),
-      //       subtitle: Text(item['titile']),
-      //      );
-      // },),
-      // floatingActionButton: FloatingActionButton.extended(
-      //     onPressed: () {
-      //       Navigator.push(context, MaterialPageRoute(builder: (context)=>AddTodoPage()));
-      //     }, label: Text('Todo List')),
+     
     );
   }
 }

@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,7 +6,6 @@ import 'package:todo/Controller/provide.dart';
 class AddTodoPage extends StatelessWidget {
   const AddTodoPage({super.key});
 
-   // final todoProvider = Provider.of<Todooprovider>(context, listen: false);
   @override
   Widget build(BuildContext context) {
       final todoProvider = Provider.of<Todooprovider>(context, listen: false);
@@ -15,30 +13,9 @@ class AddTodoPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
          backgroundColor: Colors.blue,
-        title: Text('Add Todo'),
+        title: const Text('Add Todo'),
       ),
-      body:
-      //  ListView(
-      //   children: [
-      //     TextField(
-      //       decoration: InputDecoration(
-      //             hintText: 'titile',
-      //       ),
-      //     ),
-      //     TextField(
-      //       decoration: InputDecoration( 
-      //         hintText: 'Description'),
-      //         keyboardType: TextInputType.multiline,
-      //         minLines: 5,
-      //         maxLines: 8,
-      //     ),
-      //     SizedBox(height: 20),
-      //     ElevatedButton(onPressed: (){
-      //       Navigator.pop(context);
-      //     }, child: Text('Submit')),
-      //   ],
-      // ),
-      ListView(
+      body:ListView(
         padding: const EdgeInsets.all(20),
         children: [
           TextField(
