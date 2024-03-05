@@ -38,6 +38,7 @@ dependencies:
   dio: ^5.4.1
   provider: ^6.1.2
   lottie: ^3.1.0
+  flutter_spinkit: ^5.2.0
   
 
 dev_dependencies:
